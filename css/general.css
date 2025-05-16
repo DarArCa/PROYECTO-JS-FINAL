@@ -1,0 +1,417 @@
+/* Estilos generales para todos los documentos */
+:root {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transition-speed: 0.3s;
+    
+    /* Variables de tema claro (predeterminado) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #333333;
+    --text-secondary: #6c757d;
+    --accent-color: #4285f4;
+    --border-color: #e9ecef;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --card-bg: #ffffff;
+    --header-bg: #ffffff;
+    --dropdown-bg: #ffffff;
+}
+
+/* Tema oscuro SOLO para el header */
+.dark-header {
+    --header-bg: #1a1a1a;
+    --text-primary: #f8f9fa;
+    --text-secondary: #adb5bd;
+    --border-color: #444444;
+    --dropdown-bg: #2a2a2a;
+    background-color: #1a1a1a;
+    color: #f8f9fa;
+    border-bottom-color: #444444;
+}
+
+.dark-header .nav-link {
+    color: #f8f9fa;
+}
+
+.dark-header .nav-link:hover {
+    background-color: rgba(66, 133, 244, 0.2);
+    color: var(--accent-color);
+}
+
+.dark-header .nav-link.active {
+    background-color: rgba(66, 133, 244, 0.3);
+    color: var(--accent-color);
+}
+
+.dark-header .theme-toggle,
+.dark-header .language-btn,
+.dark-header .profile-btn,
+.dark-header .logo-container a {
+    color: #f8f9fa;
+}
+
+.dark-header .language-dropdown,
+.dark-header .profile-dropdown {
+    background-color: #2a2a2a;
+    border-color: #444444;
+}
+
+.dark-header .language-option,
+.dark-header .profile-option {
+    color: #f8f9fa;
+}
+
+.dark-header .theme-toggle:hover,
+.dark-header .language-btn:hover,
+.dark-header .profile-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-header .language-option:hover,
+.dark-header .profile-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Header y navegación */
+.header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--header-bg);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.logo-container h1 {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.nav-link:hover {
+    background-color: rgba(66, 133, 244, 0.1);
+    color: var(--accent-color);
+}
+
+.nav-link.active {
+    font-weight: 700;
+    background-color: rgba(66, 133, 244, 0.2);
+    color: var(--accent-color);
+}
+
+.dark-mode .nav-link:hover {
+    background-color: rgba(66, 133, 244, 0.2);
+    color: var(--accent-color);
+}
+
+.dark-mode .nav-link.active {
+    background-color: rgba(66, 133, 244, 0.3);
+    color: var(--accent-color);
+}
+
+.right-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Botón de tema */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color var(--transition-speed);
+    color: var(--text-primary);
+}
+
+.theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Selector de idioma */
+.language-selector {
+    position: relative;
+}
+
+.language-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color var(--transition-speed);
+    color: var(--text-primary);
+}
+
+.language-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .language-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0;
+    display: none;
+    z-index: 100;
+    background-color: var(--dropdown-bg);
+    border: 1px solid var(--border-color);
+}
+
+.language-dropdown.show {
+    display: block;
+}
+
+.language-option {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    color: var(--text-primary);
+}
+
+.language-option:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .language-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Menú de perfil */
+.profile-menu {
+    position: relative;
+}
+
+.profile-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color var(--transition-speed);
+    color: var(--text-primary);
+}
+
+.profile-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .profile-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 180px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0;
+    display: none;
+    z-index: 100;
+    background-color: var(--dropdown-bg);
+    border: 1px solid var(--border-color);
+}
+
+.profile-dropdown.show {
+    display: block;
+}
+
+.profile-option {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.profile-option:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .profile-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Contenido principal */
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .nav-list {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 1rem;
+    }
+    
+    .logo-container h1 {
+        display: none;
+    }
+    
+    .nav-list {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--header-bg);
+        padding: 1rem;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        justify-content: space-around;
+    }
+    
+    .nav-link span {
+        display: none;
+    }
+    
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+    
+    .nav-link i {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    main {
+        padding: 1rem;
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 576px) {
+    .right-menu {
+        gap: 0.5rem;
+    }
+    
+    .profile-btn span {
+        display: none;
+    }
+    
+    .language-btn span {
+        display: none;
+    }
+}

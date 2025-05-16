@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Plataforma Educativa</title>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/index.css">
+        <!-- Scripts -->
+    <script src="/js/main.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Logo y título (lado izquierdo) -->
+        <div class="logo-container">
+            <a href="index.html">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+                <h1>Plataforma Educativa</h1>
+            </a>
+        </div>
+
+        <!-- Menú de navegación principal (centro) -->
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" id="dashboard-link">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/html/cursos.html" class="nav-link">
+                        <i class="fas fa-book"></i>
+                        <span>Courses</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/html/tareas.html" class="nav-link">
+                        <i class="fas fa-tasks"></i>
+                        <span>Assignments</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/html/progreso.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Progress</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/html/perfil.html" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Menú derecho (tema, idioma, perfil) -->
+        <div class="right-menu">
+            <!-- Botón de cambio de tema -->
+            <button class="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <!-- Selector de idioma -->
+            <div class="language-selector">
+                <button class="language-btn">
+                    <i class="fas fa-globe"></i>
+                    <span>English</span>
+                </button>
+                <div class="language-dropdown">
+                    <div class="language-option" data-lang="es">Español</div>
+                    <div class="language-option" data-lang="en">English</div>
+                    <div class="language-option" data-lang="de">Deutsch</div>
+                    <div class="language-option" data-lang="fr">Français</div>
+                </div>
+            </div>
+
+            <!-- Menú de perfil -->
+            <div class="profile-menu">
+                <button class="profile-btn">
+                    <img src="https://ui-avatars.com/api/?name=Usuario&background=random" alt="Profile" class="profile-img">
+                    <span>Profile</span>
+                </button>
+                <div class="profile-dropdown">
+                    <a href="perfil.html" class="profile-option">
+                        <i class="fas fa-user"></i>
+                        <span>My Profile</span>
+                    </a>
+                    <div class="profile-option">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </div>
+                    <div class="profile-option">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Log Out</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Bienvenido al Dashboard</h1>
+        <!-- Contenido de tu página -->
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Plataforma Educativa</p>
+    </footer>
+
+
+</body>
+</html>
