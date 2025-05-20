@@ -24,11 +24,12 @@ function highlightCurrentPage() {
             link.classList.remove('active');
         }
         
-        // Verificar si el href coincide con la página actual
-        const linkPath = link.getAttribute('href');
-        if (linkPath === fileName) {
+            // Verificar si el href coincide con la página actual
+            const linkPath = link.getAttribute('href');
+            const linkFileName = linkPath.split('/').pop();  // Extrae solo el nombre del archivo
+            if (linkFileName === fileName) {  // Ahora compara solo los nombres de archivos
             link.classList.add('active');
-        }
+            }
     });
     
     // Siempre resaltar el Dashboard
@@ -110,37 +111,46 @@ function toggleHeaderTheme() {
     const header = document.querySelector('.header');
     header.classList.toggle('dark-header');
     
-    // Actualizar el ícono del botón
-    const themeIcon = document.querySelector('.theme-toggle i');
-    if (themeIcon) {
-        if (header.classList.contains('dark-header')) {
-            themeIcon.className = 'fas fa-sun';
-        } else {
-            themeIcon.className = 'fas fa-moon';
-        }
-    }
+    // Actualizar el ícono del botón - versión mejorada
+    updateThemeIcon();
     
     // Guardar preferencia en localStorage
     const isDarkHeader = header.classList.contains('dark-header');
     localStorage.setItem('darkHeader', isDarkHeader);
 }
 
+// Función para actualizar el ícono de tema correctamente
+function updateThemeIcon() {
+    const themeToggle = document.querySelector('.theme-toggle');
+    const isDarkHeader = document.querySelector('.header').classList.contains('dark-header');
+    
+    if (themeToggle) {
+        // Limpiar cualquier contenido previo
+        themeToggle.innerHTML = '';
+        
+        // Crear nuevo elemento de ícono
+        const icon = document.createElement('i');
+        icon.className = isDarkHeader ? 'fas fa-sun' : 'fas fa-moon';
+        
+        // Añadir el nuevo ícono
+        themeToggle.appendChild(icon);
+    }
+}
+
 // Aplicar tema guardado SÓLO para el header
 function applyHeaderTheme() {
     const isDarkHeader = localStorage.getItem('darkHeader') === 'true';
     const header = document.querySelector('.header');
-    const themeIcon = document.querySelector('.theme-toggle i');
     
-    if (isDarkHeader) {
-        header.classList.add('dark-header');
-        if (themeIcon) {
-            themeIcon.className = 'fas fa-sun';
+    if (header) {
+        if (isDarkHeader) {
+            header.classList.add('dark-header');
+        } else {
+            header.classList.remove('dark-header');
         }
-    } else {
-        header.classList.remove('dark-header');
-        if (themeIcon) {
-            themeIcon.className = 'fas fa-moon';
-        }
+        
+        // Usar la nueva función para actualizar el ícono
+        updateThemeIcon();
     }
     
     // Aplicar idioma guardado
@@ -157,3 +167,8 @@ function applyHeaderTheme() {
         }
     }
 }
+
+// Al final de la carga del documento
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+});
