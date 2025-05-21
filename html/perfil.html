@@ -1,108 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfil - Plataforma Educativa</title>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="/css/general.css">
-    <link rel="stylesheet" href="/css/index.css">
-        <!-- Scripts -->
+    <link rel="stylesheet" href="/css/perfil.css">
+    <!-- Scripts -->
     <script src="/js/main.js"></script>
 </head>
-
 <body>
+    <!-- Header -->
     <header class="header">
-    <!-- Logo y título (lado izquierdo) -->
-    <div class="logo-container">
-        <a href="/index.html">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-            </svg>
-            <h1>Plataforma Educativa</h1>
-        </a>
-    </div>
+        <!-- Logo y título (lado izquierdo) -->
+        <div class="logo-container">
+            <a href="/index.html">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+                <h1>LMS Portal</h1>
+            </a>
+        </div>
 
-    <!-- Menú de navegación principal (centro) -->
-    <nav class="nav-menu">
-        <ul class="nav-list">
-            <li class="nav-item">
-                <a href="/index.html" class="nav-link" id="dashboard-link">
-                    <i class="fas fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="cursos.html" class="nav-link">
-                    <i class="fas fa-book"></i>
-                    <span>Courses</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="tareas.html" class="nav-link">
-                    <i class="fas fa-tasks"></i>
-                    <span>Assignments</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="progreso.html" class="nav-link">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Progress</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="perfil.html" class="nav-link">
-                    <i class="fas fa-user"></i>
+        <!-- Menú de navegación principal (centro) -->
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link" id="dashboard-link">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/html/cursos.html" class="nav-link">
+                        <i class="fas fa-book"></i>
+                        <span>Courses</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/html/tareas.html" class="nav-link">
+                        <i class="fas fa-tasks"></i>
+                        <span>Assignments</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/html/progreso.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Progress</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/html/perfil.html" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Menú derecho (tema, idioma, perfil) -->
+        <div class="right-menu">
+            <!-- Botón de cambio de tema -->
+            <button class="theme-toggle" aria-label="Cambiar tema">
+                <!-- El icono se agrega dinámicamente con JavaScript -->
+            </button>
+
+            <!-- Selector de idioma -->
+            <div class="language-selector">
+                <button class="language-btn">
+                    <i class="fas fa-globe"></i>
+                    <span>English</span>
+                </button>
+                <div class="language-dropdown">
+                    <div class="language-option" data-lang="es">Español</div>
+                    <div class="language-option" data-lang="en">English</div>
+                    <div class="language-option" data-lang="de">Deutsch</div>
+                    <div class="language-option" data-lang="fr">Français</div>
+                </div>
+            </div>
+
+            <!-- Menú de perfil -->
+            <div class="profile-menu">
+                <button class="profile-btn">
+                    <img src="https://ui-avatars.com/api/?name=Usuario&background=random" alt="Profile" class="profile-img">
                     <span>Profile</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Menú derecho (tema, idioma, perfil) -->
-    <div class="right-menu">
-        <!-- Botón de cambio de tema -->
-        <button class="theme-toggle" aria-label="Cambiar tema">
-            <i class="fas fa-moon"></i>
-        </button>
-
-        <!-- Selector de idioma -->
-        <div class="language-selector">
-            <button class="language-btn">
-                <i class="fas fa-globe"></i>
-                <span>English</span>
-            </button>
-            <div class="language-dropdown">
-                <div class="language-option" data-lang="es">Español</div>
-                <div class="language-option" data-lang="en">English</div>
-                <div class="language-option" data-lang="de">Deutsch</div>
-                <div class="language-option" data-lang="fr">Français</div>
-            </div>
-        </div>
-
-        <!-- Menú de perfil -->
-        <div class="profile-menu">
-            <button class="profile-btn">
-                <img src="https://ui-avatars.com/api/?name=Usuario&background=random" alt="Profile" class="profile-img">
-                <span>Profile</span>
-            </button>
-            <div class="profile-dropdown">
-                <a href="perfil.html" class="profile-option">
-                    <i class="fas fa-user"></i>
-                    <span>My Profile</span>
-                </a>
-                <div class="profile-option">
-                    <i class="fas fa-cog"></i>
-                    <span>Settings</span>
-                </div>
-                <div class="profile-option">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Log Out</span>
+                </button>
+                <div class="profile-dropdown">
+                    <a href="/html/perfil.html" class="profile-option">
+                        <i class="fas fa-user"></i>
+                        <span>My Profile</span>
+                    </a>
+                    <div class="profile-option">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </div>
+                    <div class="profile-option">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Log Out</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <!-- Header del perfil con fondo azul -->
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&size=120&background=4A76A8&color=ffffff" alt="Profile">
+                </div>
+                <h2 class="profile-name">John Doe</h2>
+                <p class="profile-role">Estudiante Avanzado / Student</p>
+            </div>
+            
+            <!-- Información Personal -->
+            <div class="profile-section">
+                <h3 class="section-title">Personal Information</h3>
+                
+                <div class="info-grid">
+                    <div class="info-group">
+                        <label>Full Name</label>
+                        <input type="text" value="John Doe">
+                    </div>
+                    
+                    <div class="info-group">
+                        <label>Email</label>
+                        <input type="email" value="john.doe@example.com">
+                    </div>
+                    
+                    <div class="info-group">
+                        <label>Phone</label>
+                        <input type="tel" value="+57 3183918281">
+                    </div>
+                    
+                    <div class="info-group full-width">
+                        <label>Location</label>
+                        <input type="text" value="Bucaramanga, COL">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Información Académica -->
+            <div class="profile-section">
+                <h3 class="section-title">Academic Information</h3>
+                
+                <div class="info-grid">
+                    <div class="info-group">
+                        <label>Student ID</label>
+                        <input type="text" value="123456789">
+                    </div>
+                    
+                    <div class="info-group">
+                        <label>Program</label>
+                        <input type="text" value="Tecnico en Desarrollo FullStack">
+                    </div>
+                    
+                    <div class="info-group">
+                        <label>Start Date</label>
+                        <input type="text" value="01/09/2025">
+                    </div>
+                    
+                    <div class="info-group full-width">
+                        <label>Expected Graduation</label>
+                        <input type="text" value="31/08/2025">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resumen de Progreso -->
+            <div class="profile-section">
+                <h3 class="section-title">Progress Overview</h3>
+                
+                <div class="progress-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Courses Completed</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Certificates Earned</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">92%</div>
+                        <div class="stat-label">Average Grade</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Preferencias -->
+            <div class="profile-section">
+                <h3 class="section-title">Preferences</h3>
+                
+                <div class="preferences-container">
+                    <div class="preference-item">
+                        <input type="checkbox" id="email-notifications" checked>
+                        <label for="email-notifications">Email Notifications</label>
+                        <p class="preference-description">Receive updates about your courses and assignments</p>
+                    </div>
+                    
+                    <div class="preference-item">
+                        <input type="checkbox" id="public-profile">
+                        <label for="public-profile">Public Profile</label>
+                        <p class="preference-description">Make your profile visible to other students</p>
+                    </div>
+                    
+                    <div class="preference-item">
+                        <input type="checkbox" id="show-progress" checked>
+                        <label for="show-progress">Show Progress</label>
+                        <p class="preference-description">Display your progress on your public profile</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botones de Acción -->
+            <div class="profile-actions">
+                <button id="cancel-btn" class="cancel-btn">Cancel</button>
+                <button id="save-changes-btn" class="save-changes-btn">Save Changes</button>
+            </div>
+            
+            <script>
+                // Añadir evento al botón guardar cambios para mostrar una alerta
+                document.getElementById('save-changes-btn').addEventListener('click', function() {
+                    alert('Changes saved successfully!');
+                });
+            </script>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Realizado por: Darwin Felipe Arenas Carvajal</p>
+    </footer>
+
 </body>
 </html>
