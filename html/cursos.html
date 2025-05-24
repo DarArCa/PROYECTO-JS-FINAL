@@ -9,6 +9,8 @@
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/cursos.css">
+    <script src="/js/cursos2.js"></script>
+    <link rel="stylesheet" href="/css/cursos2.css">
     <!-- Scripts -->
     <script src="/js/main.js"></script>
 </head>
@@ -22,7 +24,7 @@
                     <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                     <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                 </svg>
-                <h1>Plataforma Educativa</h1>
+                <h1>LMS Portal</h1>
             </a>
         </div>
 
@@ -36,25 +38,25 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/HTML/cursos.html" class="nav-link">
+                    <a href="/html/cursos.html" class="nav-link">
                         <i class="fas fa-book"></i>
                         <span>Courses</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/HTML/tareas.html" class="nav-link">
+                    <a href="/html/tareas.html" class="nav-link">
                         <i class="fas fa-tasks"></i>
                         <span>Assignments</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/HTML/progreso.html" class="nav-link">
+                    <a href="/html/progreso.html" class="nav-link">
                         <i class="fas fa-chart-line"></i>
                         <span>Progress</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/HTML/perfil.html" class="nav-link">
+                    <a href="/html/perfil.html" class="nav-link">
                         <i class="fas fa-user"></i>
                         <span>Profile</span>
                     </a>
@@ -90,7 +92,7 @@
                     <span>Profile</span>
                 </button>
                 <div class="profile-dropdown">
-                    <a href="/HTML/perfil.html" class="profile-option">
+                    <a href="/html/perfil.html" class="profile-option">
                         <i class="fas fa-user"></i>
                         <span>My Profile</span>
                     </a>
@@ -108,39 +110,930 @@
     </header>
 
     <main>
-        <div class="courses-container">
-            <h1 class="page-title">CURSOS</h1>
+        <div class="courses-container" id="coursesContainer">
+            <!-- Sección de Videojuegos -->
+            <section class="course-category">
+                <h2 class="category-title">Video Games</h2>
+                <div class="courses-grid">
+                    <!-- Curso 1 - Unity Game Development -->
+                    <div class="course-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="course-image">
+                                    <img src="/multimedia/1.jpeg" alt="Unity Game Development">
+                                    <div class="course-level">Intermediate</div>
+                                    <div class="course-duration">12 weeks</div>
+                                </div>
+                                <div class="course-info">
+                                    <h3 class="course-title">Unity Game Development</h3>
+                                    <p class="course-description">Create immersive 3D games with Unity. Learn C# programming, game physics, and professional game development.</p>
+                                    <div class="course-actions">
+                                        <button class="enrolly-btn" data-id="1">Enroll Now</button>
+                                        <button class="info-btn">More Info</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Unity Game Development</h3>
+                                <div class="back-content">
+                                    <h4>Course Details</h4>
+                                    <ul>
+                                        <li><strong>Duration:</strong> 12 weeks</li>
+                                        <li><strong>Level:</strong> Intermediate</li>
+                                        <li><strong>Prerequisites:</strong> Basic programming knowledge</li>
+                                        <li><strong>Software:</strong> Unity (free version)</li>
+                                    </ul>
+                                    
+                                    <h4>What You'll Learn</h4>
+                                    <ul>
+                                        <li>C# programming for game development</li>
+                                        <li>Creating 3D environments and characters</li>
+                                        <li>Game physics and collision detection</li>
+                                        <li>Animation and particle systems</li>
+                                        <li>Game UI design and implementation</li>
+                                        <li>Audio integration and sound effects</li>
+                                        <li>Game optimization techniques</li>
+                                        <li>Publishing to multiple platforms</li>
+                                    </ul>
+                                    
+                                    <h4>Projects</h4>
+                                    <p>Build a complete 3D game from start to finish, including all assets, scripts, and game mechanics.</p>
+                                </div>
+                                <button class="back-btn">Return to Course</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Curso 2 - Unreal Engine Basics -->
+                    <div class="course-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="course-image">
+                                    <img src="/multimedia/2.jpeg" alt="Unreal Engine Basics">
+                                    <div class="course-level">Beginner</div>
+                                    <div class="course-duration">8 weeks</div>
+                                </div>
+                                <div class="course-info">
+                                    <h3 class="course-title">Unreal Engine Basics</h3>
+                                    <p class="course-description">Master the fundamentals of Unreal Engine 5. Cover Blueprint visual scripting, level design, and game mechanics.</p>
+                                    <div class="course-actions">
+                                        <button class="enrolly-btn" data-id="2">Enroll Now</button>
+                                        <button class="info-btn">More Info</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Unreal Engine Basics</h3>
+                                <div class="back-content">
+                                    <h4>Course Details</h4>
+                                    <ul>
+                                        <li><strong>Duration:</strong> 8 weeks</li>
+                                        <li><strong>Level:</strong> Beginner</li>
+                                        <li><strong>Prerequisites:</strong> None</li>
+                                        <li><strong>Software:</strong> Unreal Engine 5</li>
+                                    </ul>
+                                    
+                                    <h4>What You'll Learn</h4>
+                                    <ul>
+                                        <li>Unreal Engine interface and workflow</li>
+                                        <li>Blueprint visual scripting system</li>
+                                        <li>Level design fundamentals</li>
+                                        <li>Materials and lighting</li>
+                                        <li>Character controls and animation</li>
+                                        <li>Physics and collision</li>
+                                        <li>Particle effects</li>
+                                        <li>Basic game mechanics</li>
+                                    </ul>
+                                    
+                                    <h4>Projects</h4>
+                                    <p>Create a playable 3D environment with interactive elements, custom materials, and basic gameplay mechanics.</p>
+                                </div>
+                                <button class="back-btn">Return to Course</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Curso 3 - Game Design Principles -->
+                    <div class="course-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="course-image">
+                                    <img src="/multimedia/3.jpeg" alt="Game Design Principles">
+                                    <div class="course-level">All Levels</div>
+                                    <div class="course-duration">10 weeks</div>
+                                </div>
+                                <div class="course-info">
+                                    <h3 class="course-title">Game Design Principles</h3>
+                                    <p class="course-description">Learn essential game design concepts including mechanics, dynamics, aesthetics, and player psychology.</p>
+                                    <div class="course-actions">
+                                        <button class="enrolly-btn" data-id="3">Enroll Now</button>
+                                        <button class="info-btn">More Info</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Game Design Principles</h3>
+                                <div class="back-content">
+                                    <h4>Course Details</h4>
+                                    <ul>
+                                        <li><strong>Duration:</strong> 10 weeks</li>
+                                        <li><strong>Level:</strong> All Levels</li>
+                                        <li><strong>Prerequisites:</strong> None</li>
+                                        <li><strong>Software:</strong> Various prototyping tools</li>
+                                    </ul>
+                                    
+                                    <h4>What You'll Learn</h4>
+                                    <ul>
+                                        <li>Game design theory and principles</li>
+                                        <li>MDA framework (Mechanics, Dynamics, Aesthetics)</li>
+                                        <li>Player psychology and engagement</li>
+                                        <li>Game balance and difficulty curves</li>
+                                        <li>Level design principles</li>
+                                        <li>Narrative design in games</li>
+                                        <li>User interface and user experience</li>
+                                        <li>Prototyping and playtesting</li>
+                                    </ul>
+                                    
+                                    <h4>Projects</h4>
+                                    <p>Design a complete game concept with documentation, mechanics breakdown, and playable paper or digital prototype.</p>
+                                </div>
+                                <button class="back-btn">Return to Course</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
-            <div class="courses-grid">
-                <!-- Aquí irían las tarjetas de cursos -->
-                <div class="course-card">
-                    <div class="course-image placeholder"></div>
-                    <div class="course-info">
-                        <h3>Curso de Ejemplo 1</h3>
-                        <p>Descripción del curso</p>
-                        <button class="enroll-btn">Inscribirse</button>
+            <!-- Sección de Backend -->
+            <section class="course-category">
+                <h2 class="category-title">Backend</h2>
+                <div class="courses-grid">
+                    <!-- Curso 1 - Node.js Development -->
+                    <div class="course-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="course-image">
+                                    <img src="/multimedia/4.jpeg" alt="Node.js Development">
+                                    <div class="course-level">Advanced</div>
+                                    <div class="course-duration">14 weeks</div>
+                                </div>
+                                <div class="course-info">
+                                    <h3 class="course-title">Node.js Development</h3>
+                                    <p class="course-description">Build high-performance backend services with Node.js. Cover Express.js, MongoDB, and microservices.</p>
+                                    <div class="course-actions">
+                                        <button class="enroll-btn">Enroll Now</button>
+                                        <button class="info-btn">More Info</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Node.js Development</h3>
+                                <div class="back-content">
+                                    <h4>Course Details</h4>
+                                    <ul>
+                                        <li><strong>Duration:</strong> 14 weeks</li>
+                                        <li><strong>Level:</strong> Advanced</li>
+                                        <li><strong>Prerequisites:</strong> JavaScript knowledge, basic web concepts</li>
+                                        <li><strong>Software:</strong> Node.js, MongoDB</li>
+                                    </ul>
+                                    
+                                    <h4>What You'll Learn</h4>
+                                    <ul>
+                                        <li>Node.js core concepts and modules</li>
+                                        <li>Asynchronous programming with Node.js</li>
+                                        <li>RESTful API development with Express.js</li>
+                                        <li>Database integration with MongoDB</li>
+                                        <li>Authentication and authorization</li>
+                                        <li>Microservices architecture</li>
+                                        <li>Performance optimization</li>
+                                        <li>Deployment and scaling strategies</li>
+                                    </ul>
+                                    
+                                    <h4>Projects</h4>
+                                    <p>Build a complete backend system with authentication, database integration, and RESTful API endpoints for a real-world application.</p>
+                                </div>
+                                <button class="back-btn">Return to Course</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Curso 2 - Database Design -->
+                    <div class="course-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="course-image">
+                                    <img src="/multimedia/5.jpeg" alt="Database Design">
+                                    <div class="course-level">Intermediate</div>
+                                    <div class="course-duration">10 weeks</div>
+                                </div>
+                                <div class="course-info">
+                                    <h3 class="course-title">Database Design</h3>
+                                    <p class="course-description">Comprehensive guide to database design. Learn SQL, NoSQL, data modeling, and performance optimization.</p>
+                                    <div class="course-actions">
+                                        <button class="enroll-btn">Enroll Now</button>
+                                        <button class="info-btn">More Info</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Database Design</h3>
+                                <div class="back-content">
+                                    <h4>Course Details</h4>
+                                    <ul>
+                                        <li><strong>Duration:</strong> 10 weeks</li>
+                                        <li><strong>Level:</strong> Intermediate</li>
+                                        <li><strong>Prerequisites:</strong> Basic programming knowledge</li>
+                                        <li><strong>Software:</strong> MySQL, MongoDB, PostgreSQL</li>
+                                    </ul>
+                                    
+                                    <h4>What You'll Learn</h4>
+                                    <ul>
+                                        <li>Database design principles</li>
+                                        <li>Entity-relationship modeling</li>
+                                        <li>SQL fundamentals and advanced queries</li>
+                                        <li>Normalization and denormalization</li>
+                                        <li>NoSQL database concepts</li>
+                                        <li>Indexing strategies</li>
+                                        <li>Query optimization techniques</li>
+                                        <li>Scaling and sharding</li>
+                                    </ul>
+                                    
+                                    <h4>Projects</h4>
+                                    <p>Design and implement both SQL and NoSQL databases for a complex application, including data modeling, query optimization, and performance testing.</p>
+                                </div>
+                                <button class="back-btn">Return to Course</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Curso 3 - API Development -->
+                    <div class="course-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="course-image">
+                                    <img src="/multimedia/6.jpg" alt="API Development">
+                                    <div class="course-level">Intermediate</div>
+                                    <div class="course-duration">8 weeks</div>
+                                </div>
+                                <div class="course-info">
+                                    <h3 class="course-title">API Development</h3>
+                                    <p class="course-description">Create robust APIs using REST and GraphQL. Focus on security, documentation, and best practices.</p>
+                                    <div class="course-actions">
+                                        <button class="enroll-btn">Enroll Now</button>
+                                        <button class="info-btn">More Info</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>API Development</h3>
+                                <div class="back-content">
+                                    <h4>Course Details</h4>
+                                    <ul>
+                                        <li><strong>Duration:</strong> 8 weeks</li>
+                                        <li><strong>Level:</strong> Intermediate</li>
+                                        <li><strong>Prerequisites:</strong> Basic backend development knowledge</li>
+                                        <li><strong>Software:</strong> Various frameworks and tools</li>
+                                    </ul>
+                                    
+                                    <h4>What You'll Learn</h4>
+                                    <ul>
+                                        <li>RESTful API design principles</li>
+                                        <li>GraphQL schema and resolvers</li>
+                                        <li>API authentication and authorization</li>
+                                        <li>Rate limiting and security best practices</li>
+                                        <li>API documentation with Swagger/OpenAPI</li>
+                                        <li>Versioning strategies</li>
+                                        <li>Error handling and validation</li>
+                                        <li>Testing and monitoring APIs</li>
+                                    </ul>
+                                    
+                                    <h4>Projects</h4>
+                                    <p>Build both REST and GraphQL APIs for a complex application, with comprehensive documentation, security implementation, and testing suite.</p>
+                                </div>
+                                <button class="back-btn">Return to Course</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </section>
+            
+            <!-- Sección de Frontend -->
+            <section class="course-category">
+                <h2 class="category-title">Frontend</h2>
+                <div class="courses-grid">
+                    <!-- Curso 1 - React Mastery -->
+                    <div class="course-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="course-image">
+                                    <img src="/multimedia/7.jpeg" alt="React Mastery">
+                                    <div class="course-level">Advanced</div>
+                                    <div class="course-duration">12 weeks</div>
+                                </div>
+                                <div class="course-info">
+                                    <h3 class="course-title">React Mastery</h3>
+                                    <p class="course-description">Advanced React concepts including hooks, context, Redux, and performance optimization techniques.</p>
+                                    <div class="course-actions">
+                                        <button class="enroll-btn">Enroll Now</button>
+                                        <button class="info-btn">More Info</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>React Mastery</h3>
+                                <div class="back-content">
+                                    <h4>Course Details</h4>
+                                    <ul>
+                                        <li><strong>Duration:</strong> 12 weeks</li>
+                                        <li><strong>Level:</strong> Advanced</li>
+                                        <li><strong>Prerequisites:</strong> JavaScript, basic React knowledge</li>
+                                        <li><strong>Software:</strong> Node.js, npm</li>
+                                    </ul>
+                                    
+                                    <h4>What You'll Learn</h4>
+                                    <ul>
+                                        <li>React hooks in depth</li>
+                                        <li>Context API and state management</li>
+                                        <li>Redux and Redux Toolkit</li>
+                                        <li>Performance optimization techniques</li>
+                                        <li>React Router and code splitting</li>
+                                        <li>Testing React applications</li>
+                                        <li>Custom hooks and reusable patterns</li>
+                                        <li>Server-side rendering and Next.js</li>
+                                    </ul>
+                                    
+                                    <h4>Projects</h4>
+                                    <p>Build a complex, production-ready React application with advanced state management, routing, and optimized performance.</p>
+                                </div>
+                                <button class="back-btn">Return to Course</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Curso 2 - Angular Advanced -->
+                    <div class="course-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="course-image">
+                                    <img src="/multimedia/8.jpeg" alt="Angular Advanced">
+                                    <div class="course-level">Advanced</div>
+                                    <div class="course-duration">14 weeks</div>
+                                </div>
+                                <div class="course-info">
+                                    <h3 class="course-title">Angular Advanced</h3>
+                                    <p class="course-description">Deep dive into Angular framework. Cover state management, testing, and enterprise patterns.</p>
+                                    <div class="course-actions">
+                                        <button class="enroll-btn">Enroll Now</button>
+                                        <button class="info-btn">More Info</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Angular Advanced</h3>
+                                <div class="back-content">
+                                    <h4>Course Details</h4>
+                                    <ul>
+                                        <li><strong>Duration:</strong> 14 weeks</li>
+                                        <li><strong>Level:</strong> Advanced</li>
+                                        <li><strong>Prerequisites:</strong> JavaScript, TypeScript, basic Angular</li>
+                                        <li><strong>Software:</strong> Node.js, Angular CLI</li>
+                                    </ul>
+                                    
+                                    <h4>What You'll Learn</h4>
+                                    <ul>
+                                        <li>Angular architecture in depth</li>
+                                        <li>RxJS and reactive programming</li>
+                                        <li>NgRx for state management</li>
+                                        <li>Advanced component patterns</li>
+                                        <li>Performance optimization</li>
+                                        <li>Testing with Jasmine and Karma</li>
+                                        <li>Angular Universal for server-side rendering</li>
+                                        <li>Enterprise application patterns</li>
+                                    </ul>
+                                    
+                                    <h4>Projects</h4>
+                                    <p>Develop an enterprise-grade Angular application with complex state management, optimized performance, and comprehensive test coverage.</p>
+                                </div>
+                                <button class="back-btn">Return to Course</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Curso 3 - CSS Architecture -->
+                    <div class="course-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="course-image">
+                                    <img src="/multimedia/9.jpeg" alt="CSS Architecture">
+                                    <div class="course-level">Intermediate</div>
+                                    <div class="course-duration">6 weeks</div>
+                                </div>
+                                <div class="course-info">
+                                    <h3 class="course-title">CSS Architecture</h3>
+                                    <p class="course-description">Learn to build maintainable CSS at scale using modern methodologies and tools.</p>
+                                    <div class="course-actions">
+                                        <button class="enroll-btn">Enroll Now</button>
+                                        <button class="info-btn">More Info</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>CSS Architecture</h3>
+                                <div class="back-content">
+                                    <h4>Course Details</h4>
+                                    <ul>
+                                        <li><strong>Duration:</strong> 6 weeks</li>
+                                        <li><strong>Level:</strong> Intermediate</li>
+                                        <li><strong>Prerequisites:</strong> HTML, CSS fundamentals</li>
+                                        <li><strong>Software:</strong> Code editor, Node.js</li>
+                                    </ul>
+                                    
+                                    <h4>What You'll Learn</h4>
+                                    <ul>
+                                        <li>CSS architecture principles</li>
+                                        <li>BEM, SMACSS, and OOCSS methodologies</li>
+                                        <li>CSS preprocessors (Sass, Less)</li>
+                                        <li>CSS-in-JS solutions</li>
+                                        <li>CSS Modules</li>
+                                        <li>Utility-first CSS (Tailwind)</li>
+                                        <li>Performance optimization</li>
+                                        <li>Responsive design patterns</li>
+                                    </ul>
+                                    
+                                    <h4>Projects</h4>
+                                    <p>Develop a comprehensive UI component library using modern CSS architecture principles and methodologies.</p>
+                                </div>
+                                <button class="back-btn">Return to Course</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Sección de Escuelas -->
+            <section class="course-category">
+                <h2 class="category-title">Schools</h2>
+                <div class="courses-grid">
+                    <!-- Curso 1 - Mathematics 101 -->
+                    <div class="course-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="course-image">
+                                    <img src="/multimedia/10.jpeg" alt="Mathematics 101">
+                                    <div class="course-level">Beginner</div>
+                                    <div class="course-duration">16 weeks</div>
+                                </div>
+                                <div class="course-info">
+                                    <h3 class="course-title">Mathematics 101</h3>
+                                    <p class="course-description">Introduction to core mathematical concepts including algebra, calculus, and probability theory.</p>
+                                    <div class="course-actions">
+                                        <button class="enroll-btn">Enroll Now</button>
+                                        <button class="info-btn">More Info</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Mathematics 101</h3>
+                                <div class="back-content">
+                                    <h4>Course Details</h4>
+                                    <ul>
+                                        <li><strong>Duration:</strong> 16 weeks</li>
+                                        <li><strong>Level:</strong> Beginner</li>
+                                        <li><strong>Prerequisites:</strong> Basic arithmetic</li>
+                                        <li><strong>Materials:</strong> Digital textbook provided</li>
+                                    </ul>
+                                    
+                                    <h4>What You'll Learn</h4>
+                                    <ul>
+                                        <li>Algebra fundamentals</li>
+                                        <li>Functions and graphing</li>
+                                        <li>Introduction to calculus</li>
+                                        <li>Derivatives and integrals</li>
+                                        <li>Probability concepts</li>
+                                        <li>Statistical analysis</li>
+                                        <li>Applied mathematics</li>
+                                        <li>Problem-solving techniques</li>
+                                    </ul>
+                                    
+                                    <h4>Projects</h4>
+                                    <p>Complete a series of practical problem sets and a final project applying mathematical concepts to real-world scenarios.</p>
+                                </div>
+                                <button class="back-btn">Return to Course</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Curso 2 - Physics Basics -->
+                    <div class="course-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="course-image">
+                                    <img src="/multimedia/11.jpeg" alt="Physics Basics">
+                                    <div class="course-level">Beginner</div>
+                                    <div class="course-duration">16 weeks</div>
+                                </div>
+                                <div class="course-info">
+                                    <h3 class="course-title">Physics Basics</h3>
+                                    <p class="course-description">Explore fundamental physics principles including mechanics, thermodynamics, and wave theory.</p>
+                                    <div class="course-actions">
+                                        <button class="enroll-btn">Enroll Now</button>
+                                        <button class="info-btn">More Info</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Physics Basics</h3>
+                                <div class="back-content">
+                                    <h4>Course Details</h4>
+                                    <ul>
+                                        <li><strong>Duration:</strong> 16 weeks</li>
+                                        <li><strong>Level:</strong> Beginner</li>
+                                        <li><strong>Prerequisites:</strong> Basic algebra</li>
+                                        <li><strong>Materials:</strong> Digital textbook and simulation software</li>
+                                    </ul>
+                                    
+                                    <h4>What You'll Learn</h4>
+                                    <ul>
+                                        <li>Classical mechanics</li>
+                                        <li>Newton's laws of motion</li>
+                                        <li>Energy and work</li>
+                                        <li>Thermodynamics principles</li>
+                                        <li>Wave properties and behaviors</li>
+                                        <li>Basic electromagnetism</li>
+                                        <li>Introduction to modern physics</li>
+                                        <li>Applied physics experiments</li>
+                                    </ul>
+                                    
+                                    <h4>Projects</h4>
+                                    <p>Conduct virtual lab experiments and complete a final research project on a physics topic of your choice.</p>
+                                </div>
+                                <button class="back-btn">Return to Course</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Curso 3 - Chemistry Essentials -->
+                    <div class="course-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="course-image">
+                                    <img src="/multimedia/12.jpeg" alt="Chemistry Essentials">
+                                    <div class="course-level">Beginner</div>
+                                    <div class="course-duration">16 weeks</div>
+                                </div>
+                                <div class="course-info">
+                                    <h3 class="course-title">Chemistry Essentials</h3>
+                                    <p class="course-description">Learn core chemistry concepts including atomic structure, chemical bonding, and reactions.</p>
+                                    <div class="course-actions">
+                                        <button class="enroll-btn">Enroll Now</button>
+                                        <button class="info-btn">More Info</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Chemistry Essentials</h3>
+                                <div class="back-content">
+                                    <h4>Course Details</h4>
+                                    <ul>
+                                        <li><strong>Duration:</strong> 16 weeks</li>
+                                        <li><strong>Level:</strong> Beginner</li>
+                                        <li><strong>Prerequisites:</strong> None</li>
+                                        <li><strong>Materials:</strong> Digital textbook and virtual lab access</li>
+                                    </ul>
+                                    
+                                    <h4>What You'll Learn</h4>
+                                    <ul>
+                                        <li>Atomic structure and properties</li>
+                                        <li>Periodic table and element groups</li>
+                                        <li>Chemical bonding mechanisms</li>
+                                        <li>Chemical reactions and equations</li>
+                                        <li>Acids, bases, and pH</li>
+                                        <li>Organic chemistry introduction</li>
+                                        <li>Chemical equilibrium</li>
+                                        <li>Laboratory techniques and safety</li>
+                                    </ul>
+                                    
+                                    <h4>Projects</h4>
+                                    <p>Participate in virtual lab experiments and complete a research project on applications of chemistry in everyday life.</p>
+                                </div>
+                                <button class="back-btn">Return to Course</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Contenedor para el contenido después de inscripcion -->
+        <div class="enrollment-container" id="enrollmentContainer" style="display: none;">
+            <div class="enrollment-success">
                 
-                <div class="course-card">
-                    <div class="course-image placeholder"></div>
-                    <div class="course-info">
-                        <h3>Curso de Ejemplo 2</h3>
-                        <p>Descripción del curso</p>
-                        <button class="enroll-btn">Inscribirse</button>
-                    </div>
-                </div>
+                <h2>ERROR 404 PAGE NOT FOUND</h2>
+                <p>This page has not yet been enabled by the administrator.</p>
                 
-                <div class="course-card">
-                    <div class="course-image placeholder"></div>
-                    <div class="course-info">
-                        <h3>Curso de Ejemplo 3</h3>
-                        <p>Descripción del curso</p>
-                        <button class="enroll-btn">Inscribirse</button>
+                <div class="course-access">
+                    <h3>Access to the course</h3>
+                    <p>Please come back and review the other available courses.</p>
+                    
+                    <div class="next-steps">
+                        <h4>Next steeps</h4>
+                        <ul>
+                            <li>Check the course schedule in the 'Materials' section."</li>
+                            <li>Complete your student profile for a better experience.</li>
+                            <li>Check the tasks section to see what you have pending.</li>
+                            <li>Grow and keep learning</li>
+                        </ul>
                     </div>
+                    
+                    <a href="/index.html"><button class="start-learning-btn">Start to Learn</button></a>
+                    <button class="return-courses-btn">Return to courses</button>
                 </div>
+            </div>
+        </div>
 
-                <div class="course-card">
-                    <div class="course-image placeholder"></div>
-                    <div class="course-info">
-                        <h3
+
+
+
+
+<!-- Unity Game Development (Diseño p1.png) -->
+<div id="unityCoursePage" class="course-fullpage" style="display: none;">
+    <a class="back-btn">← Back to Courses</a>
+  <section class="course-banner">
+    <div class="back-link-container">
+    </div>
+    <h1>Unity Game Development</h1>
+
+    <div class="course-meta">
+      <span><i class="fas fa-clock"></i> 12 weeks</span>
+      <span>Intermediate</span>
+      <span>250+ enrolled</span>
+    </div>
+    <p>Create immersive 3D games with Unity. Learn C# programming, game physics, and professional game development workflows.</p>
+    <div class="instructor">
+      <img src="https://ui-avatars.com/api/?name=John+Smith&background=random" alt="Instructor" />
+      <span>Dr. John Smith</span>
+    </div>
+  </section>
+
+  <section class="course-content">
+    <div class="course-main">
+      <div class="course-block">
+        <h2>Course Overview</h2>
+        <p>Create immersive 3D games with Unity. Learn C# programming, game physics, and professional game development workflows.</p>
+      </div>
+
+      <div class="course-block">
+        <h2>Prerequisites</h2>
+        <p>Basic programming knowledge in any language</p>
+        <p>Understanding of 3D geometry is helpful but not required.</p>
+      </div>
+
+      <div class="course-block">
+        <h2>What You'll Learn</h2>
+        <ul class="what-youll-learn">
+            <li>Build complete 3D games</li>
+            <li>Master C# programming</li>
+            <li>Implement game physics</li>
+            <li>Create engaging UI systems</li>
+            <li>Optimize game performance</li>
+        </ul>
+        </div>
+
+      <div class="course-block">
+  <h2>Course Structure</h2>
+
+  <div class="course-module">
+    <button class="module-header">Module 1 <span>Introduction to the Course</span></button>
+    <div class="module-body">
+      <p>Course overview and objectives</p>
+      <p>Setting up your development environment</p>
+      <p>Understanding the course structure</p>
+    </div>
+  </div>
+
+  <div class="course-module">
+    <button class="module-header">Module 2 <span>Fundamentals and Core Concepts</span></button>
+    <div class="module-body">
+      <p>Variables, Functions, Logic</p>
+      <p>GameObject manipulation</p>
+      <p>Unity physics engine</p>
+    </div>
+  </div>
+    <div class="course-module">
+    <button class="module-header">Module 1 <span>Introduction to the Course</span></button>
+    <div class="module-body">
+      <p>Course overview and objectives</p>
+      <p>Setting up your development environment</p>
+      <p>Understanding the course structure</p>
+    </div>
+  </div>
+
+  <div class="course-module">
+    <button class="module-header">Module 2 <span>Fundamentals and Core Concepts</span></button>
+    <div class="module-body">
+      <p>Variables, Functions, Logic</p>
+      <p>GameObject manipulation</p>
+      <p>Unity physics engine</p>
+    </div>
+  </div>
+
+  <!--AYUDAAAAAAAAAAAAAAAAAAAAAAAA-->
+</div>
+
+    </div>
+
+    <aside class="course-sidebar sticky-container">
+      <div class="price-box">
+        <h2>$99.99</h2>
+        <p>One-time payment</p>
+        <ul class="benefits">
+          <li>✓ Lifetime access</li>
+          <li>✓ Certificate of completion</li>
+          <li>✓ 30-day money-back guarantee</li>
+          <li>✓ Direct instructor support</li>
+        </ul>
+        <button class="start-learning-btn">Start Learning</button>
+      </div>
+    </aside>
+  </section>
+</div>
+<!-- AYUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+<div id="unrealCoursePage" class="course-fullpage" style="display: none;">
+    <a class="back-btn">← Back to Courses</a>
+    <section class="course-banner dark">
+    <div class="back-link-container">
+    </div>
+    <h1>Unreal Engine Essentials</h1>
+    <div class="course-meta">
+      <span>10 weeks</span>
+      <span>Beginner</span>
+      <span>500+ enrolled</span>
+    </div>
+    <p>Learn Unreal Engine from scratch. Build first-person experiences, understand blueprints and visual scripting, and deploy AAA-quality games.</p>
+    <div class="instructor">
+      <img src="https://ui-avatars.com/api/?name=Alex+Doe&background=random" alt="Instructor" />
+      <span>Alex Doe</span>
+    </div>
+  </section>
+
+  <section class="course-content">
+    <div class="course-main">
+      <div class="course-block">
+        <h2>What You'll Learn</h2>
+        <ul class="what-youll-learn">
+          <li>Create first-person environments</li>
+          <li>Use visual scripting (Blueprints)</li>
+          <li>Integrate assets and FX</li>
+          <li>Master level design principles</li>
+          <li>Deploy playable builds</li>
+        </ul>
+      </div>
+
+      <div class="course-block">
+        <h2>Course Structure</h2>
+        <div class="course-module">
+          <button class="module-header">Module 1 <span>Getting Started</span></button>
+          <div class="module-body">
+            <p>Installing Unreal & setup</p>
+            <p>Navigation and project creation</p>
+            <p>Overview of the UI</p>
+          </div>
+        </div>
+        <div class="course-module">
+          <button class="module-header">Module 2 <span>Systems & Feedback</span></button>
+          <div class="module-body">
+            <p>Risk vs. reward balancing</p>
+            <p>Feedback and player response</p>
+            <p>Difficulty curves</p>
+          </div>
+        </div>
+        <div class="course-module">
+          <button class="module-header">Module 2 <span>Systems & Feedback</span></button>
+          <div class="module-body">
+            <p>Risk vs. reward balancing</p>
+            <p>Feedback and player response</p>
+            <p>Difficulty curves</p>
+          </div>
+        </div>
+        <div class="course-module">
+          <button class="module-header">Module 2 <span>Blueprint Basics</span></button>
+          <div class="module-body">
+            <p>Visual scripting logic</p>
+            <p>Actor components</p>
+            <p>Game mechanics setup</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="course-sidebar sticky-container">
+      <div class="price-box">
+        <h2>$89.99</h2>
+        <p>One-time payment</p>
+        <ul class="benefits">
+          <li>✓ Lifetime access</li>
+          <li>✓ Certificate of completion</li>
+          <li>✓ Exercises & templates</li>
+          <li>✓ Direct mentor support</li>
+        </ul>
+        <button class="start-learning-btn">Start Learning</button>
+      </div>
+    </aside>
+  </section>
+</div>
+<!--AYUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-->
+<div id="designCoursePage" class="course-fullpage" style="display: none;">
+    <a class="back-btn">← Back to Courses</a>
+    <section class="course-banner yellow">
+    <div class="back-link-container">
+    </div>
+    <h1>Game Design Mastery</h1>
+    <div class="course-meta">
+      <span>8 weeks</span>
+      <span>All Levels</span>
+      <span>750+ enrolled</span>
+    </div>
+    <p>Learn how to craft engaging experiences. Explore player psychology, level flow, narrative design, and systems thinking to build better games.</p>
+    <div class="instructor">
+      <img src="https://ui-avatars.com/api/?name=Sara+Lee&background=random" alt="Instructor" />
+      <span>Sara Lee</span>
+    </div>
+  </section>
+
+  <section class="course-content">
+    <div class="course-main">
+      <div class="course-block">
+        <h2>What You'll Learn</h2>
+        <ul class="what-youll-learn">
+          <li>Design fun game loops</li>
+          <li>Build player engagement systems</li>
+          <li>Balance difficulty and rewards</li>
+          <li>Understand player motivation</li>
+          <li>Create compelling stories</li>
+        </ul>
+      </div>
+
+      <div class="course-block">
+        <h2>Course Structure</h2>
+        <div class="course-module">
+          <button class="module-header">Module 1 <span>Design Fundamentals</span></button>
+          <div class="module-body">
+            <p>What makes games fun?</p>
+            <p>Game loop and core mechanic</p>
+            <p>Player progression</p>
+          </div>
+        </div>
+        <div class="course-module">
+          <button class="module-header">Module 2 <span>Systems & Feedback</span></button>
+          <div class="module-body">
+            <p>Risk vs. reward balancing</p>
+            <p>Feedback and player response</p>
+            <p>Difficulty curves</p>
+          </div>
+        </div>
+        <div class="course-module">
+          <button class="module-header">Module 2 <span>Systems & Feedback</span></button>
+          <div class="module-body">
+            <p>Risk vs. reward balancing</p>
+            <p>Feedback and player response</p>
+            <p>Difficulty curves</p>
+          </div>
+        </div>
+        <div class="course-module">
+          <button class="module-header">Module 2 <span>Systems & Feedback</span></button>
+          <div class="module-body">
+            <p>Risk vs. reward balancing</p>
+            <p>Feedback and player response</p>
+            <p>Difficulty curves</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <aside class="course-sidebar sticky-container">
+      <div class="price-box">
+        <h2>$79.99</h2>
+        <p>One-time payment</p>
+        <ul class="benefits">
+          <li>✓ Lifetime access</li>
+          <li>✓ Certificate of completion</li>
+          <li>✓ Bonus readings & templates</li>
+          <li>✓ Portfolio-ready projects</li>
+        </ul>
+        <button class="start-learning-btn">Start Learning</button>
+      </div>
+    </aside>
+  </section>
+</div>
+<!--ESTE PORFIN ES EL FINAL DE LOS 3 QUE MUESTRO-->
+    </main>
+
+    <footer>
+        <p>&copy; Realizado por: Darwin Felipe Arenas Carvajal</p>
+    </footer>
+
+    <!-- Scripts personalizados -->
+    <script src="/js/cursos.js"></script>
+</body>
+</html>

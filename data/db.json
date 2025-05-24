@@ -1,0 +1,25 @@
+{
+  "cursos": {
+    "unreal": [
+      {
+        "total": 0,
+        "activo": false,
+        "estado": 0
+      }
+    ],
+    "unity": [
+      {
+        "total": 0,
+        "activo": false,
+        "estado": 0
+      }
+    ],
+    "game": [
+      {
+        "total": 0,
+        "activo": false,
+        "estado": 0
+      }
+    ]
+  }
+}
