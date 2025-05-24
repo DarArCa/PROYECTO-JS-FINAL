@@ -1,0 +1,314 @@
+.course-fullpage {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.course-banner {
+  background: linear-gradient(to right, #2c3e50, #34495e);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.course-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.course-meta {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.course-meta span {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 0.8rem;
+  margin-right: 0.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.course-banner p {
+  max-width: 700px;
+  font-size: 1.05rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.instructor {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+.instructor img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.back-link {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  font-size: 0.9rem;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Layout */
+.course-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-main {
+  flex: 3;
+}
+
+.course-sidebar {
+  flex: 1;
+  position: relative;
+}
+
+.sticky-container {
+  position: sticky;
+  top: 8rem; /*en esta parte se ajusta por si el flotante se llega a morder al bajar o algo asi xd */
+}
+
+/* Tarjeta de precio */
+.price-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.price-box h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.price-box p {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.benefits {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+}
+
+.benefits li {
+  list-style: none;
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+  color: #333;
+}
+
+/* Botón */
+.start-learning-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-learning-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Bloques */
+.course-block {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.course-block h2 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.course-block p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.course-block ul {
+  padding-left: 1.2rem;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.course-block ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .course-content {
+    flex-direction: column;
+  }
+
+  .course-sidebar {
+    width: 100%;
+  }
+}
+
+
+
+
+.module {
+  margin-bottom: 1rem;
+}
+
+.module-toggle {
+  width: 100%;
+  text-align: left;
+  background-color: #ecf0f1;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.module-toggle:hover {
+  background-color: #dce3e6;
+}
+
+.module-content {
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  padding: 1rem;
+  margin-top: -0.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.module-detail {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.module-content hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0.5rem 0;
+}
+
+
+
+.what-youll-learn {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.what-youll-learn li {
+  padding: 0.8rem 0;
+  font-size: 0.95rem;
+  color: #444;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.what-youll-learn li:last-child {
+  border-bottom: none;
+}
+
+
+.course-module {
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 1px solid #e1e1e1;
+  transition: all 0.3s ease;
+}
+
+.module-header {
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2c3e50;
+  transition: background 0.2s;
+}
+
+.module-header span {
+  font-weight: normal;
+  color: #666;
+  margin-left: 0.5rem;
+}
+
+.module-header:hover {
+  background-color: #eef4f8;
+}
+
+.module-body {
+  max-height: 0;
+  overflow: hidden;
+  background-color: white;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 1rem;
+}
+
+.module-body p {
+  margin: 0.8rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.module-body p:last-child {
+  border-bottom: none;
+}
+
+.course-module.active .module-body {
+  max-height: 300px; /* o más si hay más contenido */
+  padding: 1rem;
+}
+
+
+.course-banner.dark {
+  background: linear-gradient(to right, #1e272e, #485460);
+}
+
+.course-banner.yellow {
+  background: linear-gradient(to right, #f1c40f, #f39c12);
+  color: #2c3e50;
+}
