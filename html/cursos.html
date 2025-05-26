@@ -9,8 +9,15 @@
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/cursos.css">
+    <link rel="stylesheet" href="/js/permanencia.js">
     <script src="/js/cursos2.js"></script>
     <link rel="stylesheet" href="/css/cursos2.css">
+    <link rel="stylesheet" href="/css/cursos3.css">
+        <!-- Scripts personalizados -->
+    <script src="/js/cursos.js"></script>
+    <script src="/js/permanencia.js"></script>
+    <script src="/js/AYUDA.js"></script>
+    <script src="/js/completarcurso.js"></script>
     <!-- Scripts -->
     <script src="/js/main.js"></script>
 </head>
@@ -724,7 +731,7 @@
             </section>
         </div>
         
-        <!-- Contenedor para el contenido después de inscripcion -->
+        <!-- MODAL-404 -->
         <div class="enrollment-container" id="enrollmentContainer" style="display: none;">
             <div class="enrollment-success">
                 
@@ -755,7 +762,7 @@
 
 
 
-<!-- Unity Game Development (Diseño p1.png) -->
+<!-- PRIMER-MODAL-->
 <div id="unityCoursePage" class="course-fullpage" style="display: none;">
     <a class="back-btn">← Back to Courses</a>
   <section class="course-banner">
@@ -852,11 +859,55 @@
           <li>✓ 30-day money-back guarantee</li>
           <li>✓ Direct instructor support</li>
         </ul>
-        <button class="start-learning-btn">Start Learning</button>
-      </div>
+        <button class="start-learning-btn" id="12345" type="button">Start Learning</button>
+         <button class="view-course-btn" id="view-course-12345" type="button" style="display:none;">Ver Curso</button>
+              </div>
     </aside>
   </section>
 </div>
+<!--contenido del curso viene desde aqui-->
+ 
+<!-- Contenedor del curso, que estará oculto inicialmente -->
+<div id="course-container" class="course-container" style="display: none;">
+    <!-- Sidebar con los módulos -->
+    <div class="sidebar">
+        <ul id="modules-list">
+            <li class="module active" data-index="0">1. Introduction to the Course</li>
+            <li class="module" data-index="1">2. Getting Started with Tools</li>
+            <li class="module" data-index="2">3. Core Concepts</li>
+            <li class="module" data-index="3">4. Advanced Techniques</li>
+        </ul>
+    </div>
+
+    <!-- Contenido del curso -->
+    <div class="content-area">
+        <div class="course-video">
+            <iframe id="course-video" width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h2 id="course-title">Introduction to the Course</h2>
+        <div id="course-description">
+            Overview of what you will learn in this course and how to get the most out of it.
+        </div>
+
+        <div class="additional-resources">
+            <h3>Additional Resources</h3>
+            <ul>
+                <li><a href="#">Course Syllabus</a></li>
+                <li><a href="#">Setup Instructions</a></li>
+            </ul>
+        </div>
+
+        <div class="buttons">
+            <button id="previous-btn" class="previous-btn">Previous Topic</button>
+            <button id="complete-btn" class="complete-btn">Mark as Complete</button>
+            <button id="next-btn" class="next-btn">Next Topic</button>
+        </div>
+    </div>
+</div>
+
+         <!--contenido del curso viene hasta aqui-->
+  
+<!--SEGUNDO-MODAL-->
 <!-- AYUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
 <div id="unrealCoursePage" class="course-fullpage" style="display: none;">
     <a class="back-btn">← Back to Courses</a>
@@ -936,11 +987,13 @@
           <li>✓ Exercises & templates</li>
           <li>✓ Direct mentor support</li>
         </ul>
-        <button class="start-learning-btn">Start Learning</button>
+        <button class="start-learning-btn" id="123456" type="button">Start Learning</button>
+        <button class="view-course-btn" id="view-course-123456" type="button" style="display:none;">Ver Curso</button>
       </div>
     </aside>
   </section>
 </div>
+<!--TERCER-MODAL-->
 <!--AYUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-->
 <div id="designCoursePage" class="course-fullpage" style="display: none;">
     <a class="back-btn">← Back to Courses</a>
@@ -1021,7 +1074,10 @@
           <li>✓ Bonus readings & templates</li>
           <li>✓ Portfolio-ready projects</li>
         </ul>
-        <button class="start-learning-btn">Start Learning</button>
+        <button class="start-learning-btn" id="12345678" type="button">Start Learning</button>
+        <!-- Botón "Ver Curso" para el curso con id: 3 -->
+<button class="view-course-btn" id="9876" type="button" style="display:none;">Ver Curso</button>
+
       </div>
     </aside>
   </section>
@@ -1033,7 +1089,6 @@
         <p>&copy; Realizado por: Darwin Felipe Arenas Carvajal</p>
     </footer>
 
-    <!-- Scripts personalizados -->
-    <script src="/js/cursos.js"></script>
+
 </body>
 </html>

@@ -9,8 +9,11 @@
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/tareas.css">
+    <script src="/js/tareas.js"></script>
     <!-- Scripts -->
     <script src="/js/main.js"></script>
+    <meta charset="UTF-8">
+  <title>Estado del curso</title>
 </head>
 <body>
     <!-- Header -->
@@ -106,83 +109,24 @@
             </div>
         </div>
     </header>
-
     <main>
-        <div class="assignments-container">
-            <h1 class="page-title">TAREAS</h1>
-            
-            <div class="assignments-filter">
-                <div class="filter-group">
-                    <label for="course-filter">Filtrar por curso:</label>
-                    <select id="course-filter">
-                        <option value="all">Todos los cursos</option>
-                        <option value="curso1">Curso 1</option>
-                        <option value="curso2">Curso 2</option>
-                        <option value="curso3">Curso 3</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="status-filter">Estado:</label>
-                    <select id="status-filter">
-                        <option value="all">Todos</option>
-                        <option value="pending">Pendientes</option>
-                        <option value="completed">Completadas</option>
-                        <option value="late">Atrasadas</option>
-                    </select>
-                </div>
-            </div>
-            
-            <div class="assignments-list">
-                <!-- Tarea 1 -->
-                <div class="assignment-card">
-                    <div class="assignment-header">
-                        <h3>Tarea 1: Introducción a la programación</h3>
-                        <span class="assignment-status pending">Pendiente</span>
-                    </div>
-                    <div class="assignment-details">
-                        <p class="assignment-course">Curso: Fundamentos de Programación</p>
-                        <p class="assignment-due-date">Fecha límite: 20/05/2023</p>
-                    </div>
-                    <div class="assignment-actions">
-                        <button class="view-details-btn">Ver detalles</button>
-                        <button class="submit-btn">Entregar</button>
-                    </div>
-                </div>
-                
-                <!-- Tarea 2 -->
-                <div class="assignment-card">
-                    <div class="assignment-header">
-                        <h3>Tarea 2: Desarrollo de API REST</h3>
-                        <span class="assignment-status completed">Completada</span>
-                    </div>
-                    <div class="assignment-details">
-                        <p class="assignment-course">Curso: Desarrollo Web Backend</p>
-                        <p class="assignment-due-date">Fecha límite: 15/05/2023</p>
-                    </div>
-                    <div class="assignment-actions">
-                        <button class="view-details-btn">Ver detalles</button>
-                        <button class="view-feedback-btn">Ver retroalimentación</button>
-                    </div>
-                </div>
-                
-                <!-- Tarea 3 -->
-                <div class="assignment-card">
-                    <div class="assignment-header">
-                        <h3>Tarea 3: Diseño de interfaces</h3>
-                        <span class="assignment-status late">Atrasada</span>
-                    </div>
-                    <div class="assignment-details">
-                        <p class="assignment-course">Curso: Diseño UX/UI</p>
-                        <p class="assignment-due-date">Fecha límite: 10/05/2023</p>
-                    </div>
-                    <div class="assignment-actions">
-                        <button class="view-details-btn">Ver detalles</button>
-                        <button class="submit-btn urgent">Entregar ahora</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+                        <section class="asignaciones">
+  <h2>Your Assignments</h2>
+  <div class="alerta-requisito">⚠️ Some assignments require course completion before submission.</div>
+
+  <div class="filtros">
+    <button class="filtro activo">All</button>
+    <button class="filtro">Pending</button>
+    <button class="filtro">Completed</button>
+    <button class="filtro">Overdue</button>
+    <button class="filtro">Locked</button>
+  </div>
+
+  <div id="contenedor-tareas"></div>
+</section>
+</main>
+
+
 
     <footer>
         <p>&copy; Realizado por: Darwin Felipe Arenas Carvajal</p>

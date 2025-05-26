@@ -1,25 +1,61 @@
 {
-  "cursos": {
-    "unreal": [
-      {
-        "total": 0,
-        "activo": false,
-        "estado": 0
+  "cursos": [
+    {
+      "id": "1",
+      "tipo": "unreal",
+      "total": 0,
+      "activo": false,
+      "estado": 0,
+      "proyecto": {
+        "titulo": "Final Project: Unreal Game",
+        "fechaEntrega": "2024-03-14",
+        "descripcion": "Build an advanced 3D game using Unreal Engine, including blueprint scripting and multiplayer setup.",
+        "puntos": 0,
+        "tipo": "Project",
+        "modulos": [
+          "Blueprint Scripting",
+          "Multiplayer",
+          "Physics"
+        ]
       }
-    ],
-    "unity": [
-      {
-        "total": 0,
-        "activo": false,
-        "estado": 0
+    },
+    {
+      "id": "2",
+      "tipo": "unity",
+      "total": 0,
+      "activo": false,
+      "estado": 0,
+      "proyecto": {
+        "titulo": "Final Project: Unity Mobile Game",
+        "fechaEntrega": "2024-03-14",
+        "descripcion": "Create a mobile game using Unity, focusing on 2D mechanics and monetization features.",
+        "puntos": 0,
+        "tipo": "Project",
+        "modulos": [
+          "2D Physics",
+          "UI/UX",
+          "Monetization"
+        ]
       }
-    ],
-    "game": [
-      {
-        "total": 0,
-        "activo": false,
-        "estado": 0
+    },
+    {
+      "id": "3",
+      "tipo": "game",
+      "total": 0,
+      "activo": false,
+      "estado": 0,
+      "proyecto": {
+        "titulo": "Final Project: Game Design Portfolio",
+        "fechaEntrega": "2024-03-14",
+        "descripcion": "Develop a portfolio of game design concepts with playable prototypes.",
+        "puntos": 0,
+        "tipo": "Portfolio",
+        "modulos": [
+          "Design Docs",
+          "Playtesting",
+          "Iteration"
+        ]
       }
-    ]
-  }
+    }
+  ]
 }
