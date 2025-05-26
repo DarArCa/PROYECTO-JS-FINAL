@@ -166,3 +166,8 @@ body {
     height: 3px;
     background-color: #3498db;
 }
+.divider-line {
+  border: none;
+  border-top: 2px solid #d6d4d4;
+  margin: 0.5rem 0;
+}

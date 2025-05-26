@@ -5,7 +5,10 @@
 }
 
 .course-banner {
-  background: linear-gradient(to right, #2c3e50, #34495e);
+  background-image: url(/multimedia/1.jpeg);
+  background-repeat: no-repeat;     /* que no se repita */
+  background-position: center;      /* que se centre */
+  background-size: cover;   
   color: white;
   padding: 3rem 2rem;
   border-radius: 12px;
@@ -148,7 +151,7 @@
 
 .course-block h2 {
   font-size: 1.4rem;
-  color: #2c3e50;
+  color: #2f97ff;
   margin-bottom: 1rem;
 }
 
@@ -160,7 +163,7 @@
 
 .course-block ul {
   padding-left: 1.2rem;
-  color: #444;
+  color: #a0a0a0;
   font-size: 0.95rem;
 }
 
@@ -305,10 +308,39 @@
 
 
 .course-banner.dark {
-  background: linear-gradient(to right, #1e272e, #485460);
+  background-image: url(/multimedia/2.jpeg);
+  background-repeat: no-repeat;     /* que no se repita */
+  background-position: center;      /* que se centre */
+  background-size: cover;   
+  color: rgb(18, 9, 9);
 }
 
 .course-banner.yellow {
-  background: linear-gradient(to right, #f1c40f, #f39c12);
-  color: #2c3e50;
+  background-image: url(/multimedia/3.jpeg);
+  color: #fbfbfb;
+  background-repeat: no-repeat;     /* que no se repita */
+  background-position: center;      /* que se centre */
+  background-size: cover;   
+}
+.view-course-btn {
+  background-color: #fbbc04;  /* Un amarillo que resalta, pero no tan fuerte */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;  /* Botón con bordes redondeados */
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;  /* Texto en mayúsculas */
+  cursor: pointer;
+  width: 100%;  /* Asegura que el botón sea de ancho completo */
+  margin-top: 20px;  /* Espacio superior */
+  transition: background-color 0.3s ease;  /* Transición suave para el hover */
+}
+
+.view-course-btn:hover {
+  background-color: #e68900;  /* Color más oscuro en hover */
+}
+
+.view-course-btn:active {
+  background-color: #e57c00;  /* Color al hacer clic */
 }
