@@ -18,6 +18,8 @@
     <script src="/js/permanencia.js"></script>
     <script src="/js/AYUDA.js"></script>
     <script src="/js/completarcurso.js"></script>
+    <script src="/js/completarcurso2.js"></script>
+    <script src="/js/completarcurso3.js"></script>
     <!-- Scripts -->
     <script src="/js/main.js"></script>
 </head>
@@ -96,7 +98,7 @@
             <div class="profile-menu">
                 <button class="profile-btn">
                     <img src="https://ui-avatars.com/api/?name=Usuario&background=random" alt="Profile" class="profile-img">
-                    <span>Profile</span>
+                    <span>Jhon Doe</span>
                 </button>
                 <div class="profile-dropdown">
                     <a href="/html/perfil.html" class="profile-option">
@@ -233,7 +235,7 @@
                                     <h3 class="course-title">Game Design Principles</h3>
                                     <p class="course-description">Learn essential game design concepts including mechanics, dynamics, aesthetics, and player psychology.</p>
                                     <div class="course-actions">
-                                        <button class="enrolly-btn" data-id="3">Enroll Now</button>
+                                        <button class="enroll-btn" data-id="3">Enroll Now</button>
                                         <button class="info-btn">More Info</button>
                                     </div>
                                 </div>
@@ -869,40 +871,57 @@
  
 <!-- Contenedor del curso, que estará oculto inicialmente -->
 <div id="course-container" class="course-container" style="display: none;">
-    <!-- Sidebar con los módulos -->
-    <div class="sidebar">
-        <ul id="modules-list">
-            <li class="module active" data-index="0">1. Introduction to the Course</li>
-            <li class="module" data-index="1">2. Getting Started with Tools</li>
-            <li class="module" data-index="2">3. Core Concepts</li>
-            <li class="module" data-index="3">4. Advanced Techniques</li>
-        </ul>
+  <!-- Sidebar con los módulos -->
+  <div class="sidebar">
+                    <ul id="modules-list-3">
+                <li class="module" data-index="0"><span class="circle">1</span> Design Docs</li>
+                <hr class="divider-line" />
+                <li class="module" data-index="1"><span class="circle">2</span> Playtesting</li>
+                <hr class="divider-line" />
+                <li class="module" data-index="2"><span class="circle">3</span> Iteration</li>
+                <hr class="divider-line" />
+                <li class="module" data-index="3"><span class="circle">4</span> Portfolio Prep</li>
+                <hr class="divider-line" />
+                </ul>
+
+  </div>
+
+  <!-- Contenido del curso -->
+  <div class="content-area">
+    <div class="course-video">
+      <iframe
+        id="course-video"
+        width="100%"
+        height="315"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
 
-    <!-- Contenido del curso -->
-    <div class="content-area">
-        <div class="course-video">
-            <iframe id="course-video" width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <h2 id="course-title">Introduction to the Course</h2>
-        <div id="course-description">
-            Overview of what you will learn in this course and how to get the most out of it.
-        </div>
-
-        <div class="additional-resources">
-            <h3>Additional Resources</h3>
-            <ul>
-                <li><a href="#">Course Syllabus</a></li>
-                <li><a href="#">Setup Instructions</a></li>
-            </ul>
-        </div>
-
-        <div class="buttons">
-            <button id="previous-btn" class="previous-btn">Previous Topic</button>
-            <button id="complete-btn" class="complete-btn">Mark as Complete</button>
-            <button id="next-btn" class="next-btn">Next Topic</button>
-        </div>
+    <h2 id="course-title">Introduction to the Course</h2>
+    <br>
+    <div id="course-description">
+      Overview of what you will learn in this course and how to get the most out of it.
     </div>
+    <br>
+    <div class="additional-resources">
+      <h3>Additional Resources</h3>
+      <br>
+      <ul>
+        <li><a href="/index.html">Course Syllabus</a></li>
+        <br>
+        <li><a href="/index.html">Setup Instructions</a></li>
+      </ul>
+    </div>
+
+    <div class="buttons">
+      <button id="previous-btn" class="previous-btn">Previous Topic</button>
+      <button id="complete-btn" class="complete-btn">Mark as Complete</button>
+      <button id="next-btn" class="next-btn">Next Topic</button>
+    </div>
+  </div>
 </div>
 
          <!--contenido del curso viene hasta aqui-->
@@ -993,6 +1012,60 @@
     </aside>
   </section>
 </div>
+<!--contenido del curso viene desde aqui-->
+ 
+<!-- Contenedor del curso 2 (Unreal) -->
+<div id="course-container-2" class="course-container" style="display: none;">
+  <div class="sidebar">
+    <ul id="modules-list-2">
+      <li class="module" data-index="0"><span class="circle">1</span> Getting Started</li>
+      <hr class="divider-line" />
+      <li class="module" data-index="1"><span class="circle">2</span> Systems & Feedback</li>
+      <hr class="divider-line" />
+      <li class="module" data-index="2"><span class="circle">3</span> Blueprint Basics</li>
+      <hr class="divider-line" />
+      <li class="module" data-index="3"><span class="circle">4</span> Deploy & Test</li>
+      <hr class="divider-line" />
+    </ul>
+  </div>
+
+  <div class="content-area">
+    <div class="course-video">
+      <iframe
+        id="course-video-2"
+        width="100%"
+        height="315"
+        src=""
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <h2 id="course-title-2">Getting Started</h2>
+    <div id="course-description-2">
+        <br>
+      Installing Unreal, setting up the project, and navigating the interface.
+    </div>
+<br>
+    <div class="additional-resources">
+      <h3>Additional Resources</h3>
+      <ul>
+        <br>
+        <li><a href="/index.html">Blueprint Docs</a></li>
+        <br>
+        <li><a href="/index.html">Example Project</a></li>
+      </ul>
+    </div>
+
+    <div class="buttons">
+      <button id="previous-btn-2" class="previous-btn">Previous Topic</button>
+      <button id="complete-btn-2" class="complete-btn">Mark as Complete</button>
+      <button id="next-btn-2" class="next-btn">Next Topic</button>
+    </div>
+  </div>
+</div>
+
 <!--TERCER-MODAL-->
 <!--AYUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-->
 <div id="designCoursePage" class="course-fullpage" style="display: none;">
@@ -1077,11 +1150,58 @@
         <button class="start-learning-btn" id="12345678" type="button">Start Learning</button>
         <!-- Botón "Ver Curso" para el curso con id: 3 -->
 <button class="view-course-btn" id="9876" type="button" style="display:none;">Ver Curso</button>
-
       </div>
+      <!-- Contenedor del curso 3 -->
+<div id="course-container-3" class="course-container" style="display: none;">
+  <div class="sidebar">
+                <ul id="modules-list-3">
+                <li class="module" data-index="0"><span class="circle">1</span> Design Docs</li>
+
+                <li class="module-3" data-index="1"><span class="circle">2</span> Playtesting</li>
+                <li class="module-3" data-index="2"><span class="circle">3</span> Iteration</li>
+                <li class="module-3" data-index="3"><span class="circle">4</span> Portfolio Prep</li>
+                </ul>
+
+  </div>
+
+  <div class="content-area">
+    <div class="course-video">
+      <iframe
+        id="course-video-3"
+        width="100%"
+        height="315"
+        src=""
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <h2 id="course-title-3">Design Docs</h2>
+    <div id="course-description-3">
+      Learn how to create effective game design documents.
+    </div>
+
+    <div class="additional-resources">
+      <h3>Additional Resources</h3>
+      <ul>
+        <li><a href="#">Design Templates</a></li>
+        <li><a href="#">Prototype Tools</a></li>
+      </ul>
+    </div>
+
+    <div class="buttons">
+      <button id="previous-btn-3" class="previous-btn">Previous Topic</button>
+      <button id="complete-btn-3" class="complete-btn">Mark as Complete</button>
+      <button id="next-btn-3" class="next-btn">Next Topic</button>
+    </div>
+  </div>
+</div>
+
     </aside>
   </section>
 </div>
+
 <!--ESTE PORFIN ES EL FINAL DE LOS 3 QUE MUESTRO-->
     </main>
 

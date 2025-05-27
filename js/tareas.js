@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("/data/db.json")
     .then(response => response.json())
     .then(data => {
-      // Solo cursos activos
-      tareas = data.cursos.filter(curso => curso.activo);
+      tareas = data.cursos.filter(curso => curso.activo === true);
       mostrarTareas("All");
     });
 
@@ -25,9 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const tareasFiltradas = tareas.filter(curso => {
       if (filtro === "All") return true;
-      if (filtro === "Overdue") return true;
-      // En este ejemplo no hay tareas en estado "Pending", "Completed", etc.
-      // Por lo tanto, esos filtros no mostrarán nada
+      if (filtro === "Overdue") return curso.total < 100;
+      if (filtro === "Pending") return curso.total === 100 && curso.estado !== true;
+      if (filtro === "Completed") return curso.total === 100 && curso.estado === true;
       return false;
     });
 
@@ -38,13 +37,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tareasFiltradas.forEach(curso => {
       const proyecto = curso.proyecto;
+
+      let claseTarjeta = "tarjeta-tarea overdue";
+      let estadoTexto = "⏳ Overdue";
+      let botonHTML = `<button class="go-courses-btn submit-btn">📚 Go to Courses</button>`;
+
+      if (curso.total === 100 && curso.estado === true) {
+        claseTarjeta = "tarjeta-tarea tarjeta-completed";
+        estadoTexto = "✅ Completed";
+        botonHTML = ""; // No mostrar botón
+      } else if (curso.total === 100 && curso.estado !== true) {
+        claseTarjeta = "tarjeta-tarea tarjeta-pending";
+        estadoTexto = "⚠️ Pending";
+        botonHTML = `<button class="submit-btn" data-course-id="${curso.id}">📤 Submit Assignment</button>`;
+      }
+
       const tarjeta = document.createElement("div");
-      tarjeta.className = "tarjeta-tarea overdue";
+      tarjeta.className = claseTarjeta;
 
       tarjeta.innerHTML = `
-        <div class="estado">⏳ Overdue</div>
+        <div class="estado">${estadoTexto}</div>
         <h3>${proyecto.titulo}</h3>
-        <div class="categoria">🔵 ${curso.tipo.charAt(0).toUpperCase() + curso.tipo.slice(1)} Development</div>
+        <div class="categoria">🔵 ${capitalize(curso.tipo)} Development</div>
         <div class="fecha">📅 Due: ${formatearFecha(proyecto.fechaEntrega)}</div>
         <p class="descripcion">${proyecto.descripcion}</p>
         <div class="detalles">
@@ -52,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <span>📂 Type: ${proyecto.tipo}</span>
           <span>📘 Required Modules: ${proyecto.modulos.join(", ")}</span>
         </div>
-        <button class="submit-btn">📤 Submit Assignment</button>
+        ${botonHTML}
       `;
 
       contenedorTareas.appendChild(tarjeta);
@@ -62,5 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function formatearFecha(fechaStr) {
     const opciones = { year: 'numeric', month: 'short', day: 'numeric' };
     return new Date(fechaStr).toLocaleDateString('en-US', opciones);
+  }
+
+  function capitalize(texto) {
+    return texto.charAt(0).toUpperCase() + texto.slice(1);
   }
 });
